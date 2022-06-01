@@ -39,7 +39,7 @@ int main(int, char**)
         else if (sel == "d" || sel == "D") 
         {
             // Withdraw from all accounts
-            std::cout << "Enter the amount to withdra from all accounts: ";
+            std::cout << "Enter the amount to withdraw from all accounts: ";
             double amount = mn.getAmountFromUser();
             if (amount > -1) 
                 mn.withdrawFromAll(amount);
@@ -50,7 +50,7 @@ int main(int, char**)
         }
         else 
         {
-            std::cout << "Invalid\n";
+            display_msg(msg::ERROR, "Invalid");
         }
     } 
     while (sel != "x" && sel != "X");
