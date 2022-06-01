@@ -1,0 +1,37 @@
+[
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/main.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/main.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/main.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/I_Printable.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/I_Printable.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/I_Printable.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/Account.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/Account.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/Account.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/Account_Manager.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/Account_Manager.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/Account_Manager.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/Savings_Account.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/Savings_Account.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/Savings_Account.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/Checking_Account.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/Checking_Account.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/Checking_Account.cpp"
+},
+{
+  "directory": "C:/Users/Gisel/Documents/cpp_projects/accounts/build",
+  "command": "\"C:/Program Files/MinGW/bin/g++.exe\"   -g -o CMakeFiles/accounts.dir/Trust_Account.cpp.obj -c C:/Users/Gisel/Documents/cpp_projects/accounts/Trust_Account.cpp",
+  "file": "C:/Users/Gisel/Documents/cpp_projects/accounts/Trust_Account.cpp"
+}
+]
