@@ -1,5 +1,5 @@
-#ifndef _SAVINGS_ACCOUNT_H_
-#define _SAVINGS_ACCOUNT_H_
+#ifndef SAVINGS_ACCOUNT_H
+#define SAVINGS_ACCOUNT_H
 
 #include "Account.h"
 #include <iostream>

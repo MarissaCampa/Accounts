@@ -4,7 +4,8 @@ project(accounts VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(accounts main.cpp 
+add_executable(accounts 
+    main.cpp 
     I_Printable.cpp I_Printable.h
     Account.cpp Account.h 
     Account_Util.h

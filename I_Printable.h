@@ -1,5 +1,5 @@
-#ifndef _I_PRINTABLE_H_
-#define _I_PRINTABLE_H_
+#ifndef I_PRINTABLE_H
+#define I_PRINTABLE_H
 
 #include <iostream>
 

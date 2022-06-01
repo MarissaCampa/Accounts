@@ -1,6 +1,6 @@
 #include "Account.h"
 
-
+// Constructor
 Account::Account(std::string n, int a) 
     : name(n), balance(a) {
 }
@@ -28,14 +28,3 @@ void Account::print(std::ostream &os) const {
     os << "Account: " << name << ", " << balance;
 }
 
-void Account::display_msg(msg m, std::string text, bool add_jump) {
-    if (m == msg::INFO)
-        std::cout << "[INFO] ";
-    else if (m == msg::ERROR)
-        std::cout << "[ERROR] ";
-    else if (m == msg::USER)
-        std::cout << "[USER] ";
-    std::cout << text;
-    if (add_jump)
-        std::cout << '\n';
-}

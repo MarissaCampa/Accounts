@@ -1,5 +1,5 @@
-#ifndef _ACCOUNT_MANAGER_H_
-#define _ACCOUNT_MANAGER_H_
+#ifndef ACCOUNT_MANAGER_H
+#define ACCOUNT_MANAGER_H
 
 #include "Account.h"
 #include "Account_Util.h"
@@ -12,6 +12,7 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <limits>
 
 class Account_Manager {
 private:
@@ -19,6 +20,10 @@ private:
 public:
     void showMenu();
     bool openNewAccount();
+    void depositToAll(double amount);
+    void withdrawFromAll(double amount);
+    double getAmountFromUser();
+    void displayAllAccounts();
 };
 
 

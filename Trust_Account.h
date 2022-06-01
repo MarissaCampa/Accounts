@@ -1,5 +1,5 @@
-#ifndef _TRUST_ACCOUNT_H_
-#define _TRUST_ACCOUNT_H_
+#ifndef TRUST_ACCOUNT_H
+#define TRUST_ACCOUNT_H
 
 #include "Savings_Account.h"
 #include <iostream>

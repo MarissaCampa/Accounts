@@ -1,7 +1,8 @@
-#ifndef _ACCOUNT_H_
-#define _ACCOUNT_H_
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
 
 #include "I_Printable.h"
+#include "Account_Util.h"
 #include <iostream>
 #include <string>
 
@@ -11,7 +12,6 @@ private:
     static constexpr const char *def_name = "Default Account";
     static constexpr const int def_balance = 0.0;
 protected:
-    enum class msg { INFO, ERROR, USER };
     std::string name;
     double balance;
 public:
@@ -24,7 +24,6 @@ public:
     virtual bool deposit(double amount);
     virtual bool withdraw(double amount);
     virtual void print(std::ostream &os) const override;
-    void display_msg(msg m, std::string text, bool add_jump = true);
 };
 
 #endif

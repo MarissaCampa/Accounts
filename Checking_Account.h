@@ -1,3 +1,6 @@
+#ifndef CHECKING_ACCOUNT_H
+#define CHECKING_ACCOUNT_H
+
 #include "Account.h"
 #include <iostream>
 #include <string>
@@ -18,3 +21,6 @@ public:
 
     virtual ~Checking_Account() = default;
 };
+
+
+#endif // _CHECKING_ACCOUNT_H_
