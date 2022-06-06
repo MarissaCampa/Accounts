@@ -2,7 +2,6 @@
  * @file Checking_Account.h
  * @author Marissa Campa (marissag.campa@gmail.com)
  * @brief Header file for the Checking_Account class
- * @date 2022-06-06
  * @copyright Copyright (c) 2022
  * 
  * The Checking_Account class inherits from the Account class 
@@ -39,6 +38,8 @@ public:
     // Overridden methods from the Account class
     virtual AccountTypes getType() const override { return m_Type; }
     virtual bool withdraw(double amount) override;
+
+    // Overriden method from the I_Printable class
     virtual void print(std::ostream &os) const override;
 };
 

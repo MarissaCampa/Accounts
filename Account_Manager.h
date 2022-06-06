@@ -2,7 +2,6 @@
  * @file Account_Manager.h
  * @author Marissa Campa (marissag.campa@gmail.com)
  * @brief Header file for the Account_Manager class
- * @date 2022-06-06
  * @copyright Copyright (c) 2022
  * 
  * This class can be instanciated and used as an interface
@@ -51,7 +50,8 @@ protected:
     void printAccountsTableDivider(bool bottom);
 
 public:
-    // Helper functions that can be used in the main function()
+    // Helper functions that can be  
+    // called from the main function()
     void showMenu();
     bool openNewAccount();
     bool depositToAccount();

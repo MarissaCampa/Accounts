@@ -2,7 +2,6 @@
  * @file Account.h
  * @author Marissa Campa (marissag.campa@gmail.com)
  * @brief Header file for the Account class
- * @date 2022-06-06
  * @copyright Copyright (c) 2022
  * 
  * The Account class inherits from the I_Printable class 
@@ -48,6 +47,8 @@ public:
     // Public methods declared as virtual for inheritance
     virtual bool deposit(double amount);
     virtual bool withdraw(double amount);
+
+    // Overriden method from the I_Printable class
     virtual void print(std::ostream &os) const override;
 };
 
