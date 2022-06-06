@@ -2,8 +2,7 @@
  * @file Account_Util.h
  * @author Marissa Campa (marissag.campa@gmail.com)
  * @brief Helper file that contains variables and functions useful
- *          to the Account_Manager and Account classes, and the main function
- * @date 2022-06-06
+ *        to the Account_Manager and Account classes, and the main function
  * @copyright Copyright (c) 2022
  * 
  */

@@ -2,7 +2,6 @@
  * @file I_Printable.h
  * @author Marissa Campa (marissag.campa@gmail.com)
  * @brief Header file for the interface class I_Printable
- * @date 2022-06-06
  * @copyright Copyright (c) 2022
  * 
  * This class serves as an interface class, to be able to make
