@@ -1,3 +1,12 @@
+/**
+ * @file Account.h
+ * @author Marissa Campa (marissag.campa@gmail.com)
+ * @brief Header file for the Account class
+ * @date 2022-06-06
+ * @copyright Copyright (c) 2022
+ * 
+ * The Account class inherits from the I_Printable class 
+ */
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
@@ -8,22 +17,38 @@
 
 class Account : public I_Printable
 {
-private:
-    static constexpr const char *def_name = "Default Account";
-    static constexpr const int def_balance = 0.0;
 protected:
-    std::string name;
-    double balance;
+    // Class members that can be inherited
+    std::string m_Name;
+    double m_Balance;
+
+private:
+    // Helper variables for the default arguments of the constructor
+    static constexpr const char *c_DefaultName = "Default Account";
+    static constexpr const int c_DefaultBalance = 0.0;
+
+    // Type of account, specific to this class
+    AccountTypes m_Type;
+
 public:
-    Account(std::string n = def_name, int a = def_balance);
+    // Default two-arg constructor
+    Account(std::string name = c_DefaultName, int balance = c_DefaultBalance);
+
+    // Copy constructor
     Account(const Account& src);
-    virtual ~Account() = default;
 
-    double getBalance() const { return balance; }
+    // Virtual default destructor
+    virtual ~Account() = default;       
 
+    // Getter methods declared as virtual for inheritance
+    virtual std::string getName() const { return m_Name; }
+    virtual double getBalance() const { return m_Balance; }
+    virtual AccountTypes getType() const { return m_Type; }
+
+    // Public methods declared as virtual for inheritance
     virtual bool deposit(double amount);
     virtual bool withdraw(double amount);
     virtual void print(std::ostream &os) const override;
 };
 
-#endif
+#endif // ACCOUNT_H

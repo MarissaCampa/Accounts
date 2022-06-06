@@ -1,3 +1,12 @@
+/**
+ * @file Trust_Account.h
+ * @author Marissa Campa (marissag.campa@gmail.com)
+ * @brief Header file for the Trust_Account class
+ * @date 2022-06-06
+ * @copyright Copyright (c) 2022
+ * 
+ * The Trust_Account class inherits from the Account class 
+ */
 #ifndef TRUST_ACCOUNT_H
 #define TRUST_ACCOUNT_H
 
@@ -8,23 +17,35 @@
 class Trust_Account : public Savings_Account 
 {
 private:
-    static constexpr const char *def_name = "Trust Account";
-    static constexpr const int def_balance = 0.0;
-    static constexpr const double bonus_min_amount = 5000;
-    static constexpr const double bonus = 50;
-    static constexpr const int total_movements_allowed = 3;
+    // Helper variables for the default arguments of the constructor
+    static constexpr const char *c_DefaultName = "Trust Account";
+    static constexpr const int c_DefaultBalance = 0.0;
+    static constexpr const double c_MinumumAmountForBonus = 5000;
+    static constexpr const double c_Bonus = 50.0;
+    static constexpr const int c_TotalMovementsAllowed = 3;
+
+    // Type of account, specific to this class
+    AccountTypes m_Type;
+
 protected:
-    int total_movements;
+    // Class members that can be inherited
+    unsigned int m_TotalMovements;
 
 public:
-    Trust_Account(std::string n = def_name, double b = def_balance, double r = def_rate);
+    // Default three-arg constructor
+    Trust_Account(std::string name = c_DefaultName, double balance = c_DefaultBalance, double interest_rate = c_DefaultInterestRate);
+
+    // Copy constructor
     Trust_Account(const Trust_Account& src);
 
-    virtual bool deposit(double amount) override;
-
-    virtual void print(std::ostream &os) const override;
-
+    // Virtual default constructor
     virtual ~Trust_Account() = default;
+
+    // Overriden methods from the Savings_Account class
+    virtual AccountTypes getType() const override { return m_Type; }
+    virtual bool deposit(double amount) override;
+    virtual bool withdraw(double amount) override;
+    virtual void print(std::ostream &os) const override;
 };
 
 #endif

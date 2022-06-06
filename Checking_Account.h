@@ -1,3 +1,13 @@
+/**
+ * @file Checking_Account.h
+ * @author Marissa Campa (marissag.campa@gmail.com)
+ * @brief Header file for the Checking_Account class
+ * @date 2022-06-06
+ * @copyright Copyright (c) 2022
+ * 
+ * The Checking_Account class inherits from the Account class 
+ * 
+ */
 #ifndef CHECKING_ACCOUNT_H
 #define CHECKING_ACCOUNT_H
 
@@ -8,18 +18,28 @@
 class Checking_Account : public Account 
 {
 private:
-    static constexpr const char *def_name = "Checking Account";
-    static constexpr const int def_balance = 0.0;
-    static constexpr const double withdraw_fee = 1.5;
+    // Helper variables for the default arguments of the constructor
+    static constexpr const char *c_DefaultName = "Checking Account";
+    static constexpr const int c_DefaultBalance = 0.0;
+    static constexpr const double c_WithdrawFee = 1.5;
+
+    // Type of account, specific to this class
+    AccountTypes m_Type;
+
 public:
-    Checking_Account(std::string n = def_name, double b = def_balance);
+    // Default two-arg constructor
+    Checking_Account(std::string name = c_DefaultName, double balance = c_DefaultBalance);
+
+    // Copy constructor
     Checking_Account(const Checking_Account& src);
 
-    virtual bool withdraw(double amount) override;
-
-    virtual void print(std::ostream &os) const override;
-
+    // Virtual default constructor
     virtual ~Checking_Account() = default;
+
+    // Overridden methods from the Account class
+    virtual AccountTypes getType() const override { return m_Type; }
+    virtual bool withdraw(double amount) override;
+    virtual void print(std::ostream &os) const override;
 };
 
 

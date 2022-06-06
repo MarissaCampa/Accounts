@@ -1,3 +1,12 @@
+/**
+ * @file Account_Util.h
+ * @author Marissa Campa (marissag.campa@gmail.com)
+ * @brief Helper file that contains variables and functions useful
+ *          to the Account_Manager and Account classes, and the main function
+ * @date 2022-06-06
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef ACCOUNT_UTIL_H
 #define ACCOUNT_UTIL_H
 
@@ -6,33 +15,41 @@
 #include <memory>
 #include <vector>
 
-// void display(const Account &acc) {
-//     std::cout << acc << std::endl;
-// }
+// Classification of an account or account-derived object
+enum class AccountTypes { REGULAR, SAVINGS, CHECKING, TRUST };
 
-// void display(const std::unique_ptr<Account> &acc) {
-//     std::cout << *acc << std::endl;
-// }
+// Classification of the messages to display
+enum class Msg { INFO, ERROR, USER };
 
-// void display(const std::vector<std::unique_ptr<Account>> &vec) {
-//     for (const auto &v : vec)
-//         std::cout << *v << std::endl;
-// }
+// Classification of an action to perform on an account object
+enum class Action { DEPOSIT, WITHDRAW };
 
-enum class msg { INFO, ERROR, USER };
-
-static void display_msg(msg m, std::string text, bool add_jump = true) {
-    if (m == msg::INFO)
+/**
+ * @brief Displays a message to the user according to the
+ *          message classification dictated by the parameter m
+ * 
+ * @param m Classification of the message to display 
+ * @param text Message to display to the user
+ * @param add_jump If true, the function adds a line end character 
+ *                  after the message
+ */
+static void display_msg(Msg m, std::string text, bool add_jump = true) {
+    std::cout << ' ';
+    if (m == Msg::INFO)
         std::cout << "[INFO] ";
-    else if (m == msg::ERROR)
+    else if (m == Msg::ERROR)
         std::cout << "[ERROR] ";
-    else if (m == msg::USER)
+    else if (m == Msg::USER)
         std::cout << "[USER] ";
     std::cout << text;
     if (add_jump)
         std::cout << '\n';
 }
 
+static void flushInput(std::istream &is) {
+    is.clear();
+    is.sync();
+}
 
 
 
