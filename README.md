@@ -178,6 +178,11 @@ The Trust Account also has a bonus amount that gets deposited if the amount to d
 </details>
 
  
+ ## 🤝 Acknowledgements
+ 
+I used for this project some ideas given in the Udemy course "Beginning C++ Programming - From Beginner to Beyond" from Tim Buchalka's Learn Programming Academy, which I took and fully recommend. It is a great C++ course!
+ 
+ 
 ## 👋 About Me
 
 My name is Marissa Campa, I'm a Mechatronics Engineer with a Master of Science in Automation.
